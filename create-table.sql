@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS Student;
+CREATE TABLE Student (
+    id INT AUTO_INCREMENT NOT NULL,
+    FullName VARCHAR(100) NOT NULL,
+    City VARCHAR(20) NOT NULL,
+    PRIMARY KEY (`id`)
+); 
+
+INSERT INTO Student
+    (FullName,City)
+VALUES
+    ("Kashyap","HYD"),
+    ("Rakesh","DL"),
+    ("Ramesh","CN")
