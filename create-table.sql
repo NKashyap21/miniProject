@@ -5,10 +5,3 @@ CREATE TABLE Student (
     City VARCHAR(20) NOT NULL,
     PRIMARY KEY (`id`)
 ); 
-
-INSERT INTO Student
-    (FullName,City)
-VALUES
-    ("Kashyap","HYD"),
-    ("Rakesh","DL"),
-    ("Ramesh","CN")

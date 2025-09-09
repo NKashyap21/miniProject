@@ -24,6 +24,8 @@ func SetupDatabase() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer DB.Close()
-	fmt.Println("Database connected!")
+	if pingErr := DB.Ping(); pingErr != nil {
+		log.Fatal(pingErr)
+	}
+	fmt.Println("Conected to the database.")
 }
