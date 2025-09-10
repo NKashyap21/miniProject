@@ -1,15 +1,11 @@
 package main
 
 import (
+	"github.com/NKashyap21/miniProject/handlers"
 	"github.com/NKashyap21/miniProject/initializers"
 	"github.com/gin-gonic/gin"
 )
 
-type Student struct {
-	Id       int64
-	FullName string
-	City     string
-}
 
 func init() {
 	initializers.LoadEnvVariables()
@@ -19,6 +15,10 @@ func init() {
 func main() {
 	router := gin.Default()
 
-	router.GET("/all",HandleAll)
+	router.GET("/student/all", handlers.HandleAll)
+	router.GET("/student/:id", handlers.HandleStudentById)
+	router.POST("/student/add", handlers.HandleAddStudent)
+	router.DELETE("/student/delete/:id",handlers.HandleDeleteByID)
+	router.Run()
 
 }

@@ -1,7 +1,7 @@
 package models
 
 type Student struct {
-	ID       int64
-	FullName string
-	City     string
+	ID       int64  `json:"id"`
+	FullName string `json:"fullName"`
+	City     string `json:"city"`
 }

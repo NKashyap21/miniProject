@@ -20,7 +20,7 @@ func SetupDatabase() {
 	cfg.DBName = "college"
 
 	var err error
-	DB, err := sql.Open("mysql", cfg.FormatDSN())
+	DB, err = sql.Open("mysql", cfg.FormatDSN())
 	if err != nil {
 		log.Fatal(err)
 	}
